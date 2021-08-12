@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -26,14 +27,79 @@ body {
 }
 
 .form header {
+  font-family: "Courier Prime", monospace;
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 700;
   border-bottom: 1px solid #e6e6e6;
   padding-bottom: 10px;
 }
 
 .form form {
   margin: 20px O;
+}
+
+.form form .field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form form .field label {
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.form form .field input {
+  outline: none;
+}
+
+.form form .input input {
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form form .photo input {
+  font-size: 16px;
+}
+
+.form form .button input {
+  font-size: 16px;
+  margin-top: 13px;
+  height: 45px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form form .error-txt {
+  color: #ff5466;
+  background-color: #ffdfe2;
+  font-weight: 500;
+  padding: 8px 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ff5466;
+}
+
+.form .link {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.form .link a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.form .link a:hover {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
