@@ -44,6 +44,7 @@ body {
   position: relative;
   flex-direction: column;
   margin-bottom: 15px;
+  margin-top: 15px;
 }
 
 .form form .field label {
@@ -88,6 +89,7 @@ body {
   border-radius: 5px;
   margin-bottom: 10px;
   border: 1px solid #ff5466;
+  display: none;
 }
 
 .form .link {
@@ -185,6 +187,14 @@ body {
   font-size: 16px;
   border-radius: 5px 0 0 5px;
   outline: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.users .search input.active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .users .search button {
@@ -192,11 +202,21 @@ body {
   height: 40px;
   border: none;
   outline: none;
-  color: #fff;
-  background-color: #333;
+  color: #333;
+  background-color: #fff;
   border-radius: 0 5px 5px 0;
   cursor: pointer;
   font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.users .search button.active {
+  color: #fff;
+  background-color: #333;
+}
+
+.users .search button.active i::before {
+  content: "";
 }
 
 .users-list {
