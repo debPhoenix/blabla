@@ -30,16 +30,14 @@
             <header>Blabla App</header>
             <form action="#" autocomplete="off">
             <div class="name-details">
-                <div class="error-txt">
-                    Ceci est un message d'erreur
-                </div>
+                <div class="error-txt"></div>
                 <div class="field input">
                     <label>Email</label>
-                    <input type="email" placeholder="saisir votre email">
+                    <input type="email" name="email" placeholder="saisir votre email">
                 </div>
                 <div class="field input">
                     <label>Mot de passe</label>
-                    <input type="password" placeholder="saisir votre mot de passe">
+                    <input type="password" name="mdp" placeholder="saisir votre mot de passe">
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="field button">
@@ -53,5 +51,6 @@
     </div>
     <!-- JS -->
     <script src="assets/js/show-hide-pass.js"></script>
+    <script src="assets/js/login.js"></script>
 </body>
 </html>
