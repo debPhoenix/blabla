@@ -28,9 +28,9 @@
     <div class="wrapper">
         <section class="form login">
             <header>Blabla App</header>
-            <form action="#">
+            <form action="#" autocomplete="off">
             <div class="name-details">
-                <div class="div error-txt">
+                <div class="error-txt">
                     Ceci est un message d'erreur
                 </div>
                 <div class="field input">
@@ -47,10 +47,11 @@
                 </div>
             </div>
             </form>
-            <div class="link">Nouveau? <a href="#">S'enregistrer</a></div>
+            <div class="link">Nouveau? <a href="index.php">S'enregistrer</a></div>
         </section>
 
     </div>
+    <!-- JS -->
     <script src="assets/js/show-hide-pass.js"></script>
 </body>
 </html>

@@ -98,6 +98,7 @@
 
 
     </div>
+    <!-- JS -->
     <script src="assets/js/users.js"></script>
 </body>
 </html>

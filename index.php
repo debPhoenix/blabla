@@ -28,42 +28,40 @@
     <div class="wrapper">
         <section class="form signup">
             <header>Blabla App</header>
-            <form action="#">
+            <form action="#" enctype="multipart/form-data">
             <div class="name-details">
-                <div class="div error-txt">
-                    Ceci est un message d'erreur
-                </div>
+                <div class="error-txt"></div>
                 <div class="field input">
                     <label>Prénom</label>
-                    <input type="text" placeholder="saisir votre prénom">
+                    <input type="text" name="prenom" placeholder="saisir votre prénom" required>
                 </div>
                 <div class="field input">
                     <label>Nom</label>
-                    <input type="text" placeholder="saisir votre nom">
+                    <input type="text" name="nom" placeholder="saisir votre nom" required>
                 </div>
                 <div class="field input">
                     <label>Email</label>
-                    <input type="email" placeholder="saisir votre email">
+                    <input type="email" name="email" placeholder="saisir votre email" required>
                 </div>
                 <div class="field input">
                     <label>Mot de passe</label>
-                    <input type="password" placeholder="saisir un mot de passe">
+                    <input type="password" name="mdp" placeholder="saisir un mot de passe required">
                     <i class="fas fa-eye"></i>
                 </div>
                 <div class="field photo">
-                    <label>Photo de profil</label>
-                    <input type="file">
+                    <label>Choisir un avatar:</label>
+                    <input type="file" name="avatar">
                 </div>
                 <div class="field button">
                     <input type="submit" value="Continuer">
                 </div>
             </div>
             </form>
-            <div class="link">Déjà enregistré? <a href="#">Se connecter</a></div>
+            <div class="link">Déjà enregistré? <a href="login.php">Se connecter</a></div>
         </section>
-
-
     </div>
+    <!-- JS -->
     <script src="assets/js/show-hide-pass.js"></script>
+    <script src="assets/js/sign-up.js"></script>
 </body>
 </html>

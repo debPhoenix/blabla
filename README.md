@@ -7,7 +7,7 @@ soon
 * HTML 5
 * CSS 3
 * SASS
-* JS
+* JS / Ajax
 * MySQL
 * PHP
 
