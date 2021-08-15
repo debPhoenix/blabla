@@ -1,38 +1,29 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- ICON -->
-    <link rel="icon" type="image/png" sizes="32x32" href="#">
-    <link rel="shortcut icon" href="#" type="image/x-icon">
-    <link rel="apple-touch-icon" href="#">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <!-- METATAGS -->
-    <title>Blabla App</title>
-    <meta name="title" content="Blabla App">
-    <meta name="description" content="Realtime chat">
-    <meta name="author" content="Déb Phoenix">
-    <meta name="language" content="fr">
-    <meta name="keywords" content="chat, tchat, discussion, discuter, échanger">
-    <meta name="robots" content="index,follow">
-    <meta name="copyright" content="Déb Phoenix">
-</head>
+<?php
+    session_start();
+    if(!isset($_SESSION['unique_id'])){
+        // set session when user login ou signup
+        // if session not set redirect user to login page
+        header("location: login.php");
+    }
+?>
+<?php include_once "header.php"; ?>
 <body>
     <div class="wrapper">
         <section class="users">
             <header>
+            <?php
+            include_once "assets/back/config.php";
+            // selecr all data of current logged in user using session
+            $sql = mysqli_query($conn, "SELECT * FROM users WHERE unique_id = {$_SESSION['unique_id']}");
+            if(mysqli_num_rows($sql) > 0){
+                $row = mysqli_fetch_assoc($sql);
+            }
+            ?>
                 <div class="content">
-                    <img src="assets/img/db.png" alt="">
+                    <img src="assets/back/avatar/<?php echo $row['avatar']?>" alt="">
                     <div class="details">
-                        <span>Déb Phoenix</span>
-                        <p>En ligne</p>
+                        <span><?php echo $row['prenom'] . " " . $row['nom']?></span>
+                        <p><?php echo $row['status']?></p>
                     </div>
                 </div>
                 <a href="#" class="logout">Se déconnecter</a>
@@ -43,60 +34,9 @@
                 <button><i class="fas fa-search"></i></button>
             </div>
             <div class="users-list">
-                <a href="#">
-                    <div class="content">
-                        <img src="assets/img/db.png"" alt="">
-                        <div class="details">
-                            <span>Déb Phoenix</span>
-                            <p>test de la zone de message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="assets/img/db.png"" alt="">
-                        <div class="details">
-                            <span>Déb Phoenix</span>
-                            <p>test de la zone de message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="assets/img/db.png"" alt="">
-                        <div class="details">
-                            <span>Déb Phoenix</span>
-                            <p>test de la zone de message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="assets/img/db.png"" alt="">
-                        <div class="details">
-                            <span>Déb Phoenix</span>
-                            <p>test de la zone de message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
-                <a href="#">
-                    <div class="content">
-                        <img src="assets/img/db.png"" alt="">
-                        <div class="details">
-                            <span>Déb Phoenix</span>
-                            <p>test de la zone de message</p>
-                        </div>
-                    </div>
-                    <div class="status-dot"><i class="fas fa-circle"></i></div>
-                </a>
+
             </div>
         </section>
-
-
     </div>
     <!-- JS -->
     <script src="assets/js/users.js"></script>
