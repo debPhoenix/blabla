@@ -26,11 +26,11 @@
                         <p><?php echo $row['status']?></p>
                     </div>
                 </div>
-                <a href="#" class="logout">Se déconnecter</a>
+                <a href="assets/back/logout.php?logout_id=<?php echo $row['unique_id']?>" class="logout">Se déconnecter</a>
             </header>
             <div class="search">
                 <span class="text">Chercher un utilisateur avec qui discuter </span>
-                <input type="text" placeholder="saisir le nom d'utilisateur">
+                <input type="text" placeholder="saisir le nom d'un utilisateur">
                 <button><i class="fas fa-search"></i></button>
             </div>
             <div class="users-list">
