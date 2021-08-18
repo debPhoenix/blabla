@@ -26,52 +26,7 @@
                     <p><?php echo $row['status']?></p>
                 </div>
             </header>
-            <div class="chat-box">
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="chat incoming">
-                    <img src="assets/img/db.png" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="chat incoming">
-                    <img src="assets/img/db.png" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="chat incoming">
-                    <img src="assets/img/db.png" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="chat incoming">
-                    <img src="assets/img/db.png" alt="">
-                    <div class="details">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-            </div>
+            <div class="chat-box"></div>
             <form action="#" class="typing-area" autocomplete="off" >
                 <!-- hidden inputs to send msg_sender_id + msg_receiver_id -->
                 <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id'];?>" hidden>
