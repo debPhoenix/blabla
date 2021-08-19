@@ -1,21 +1,22 @@
 # BLABLA APP
- ! [Statistiques] https://github-readme-stats.vercel.app/api/top-langs/?username=debPhoenix&theme=blue-green
-
-  ! [Statistiques] https://github-readme-stats.vercel.app/api?username=debPhoenix&show_icons=true
+Ce chat est une application web.
 
 ## INSTALLATION
 soon
 
-## TECHNO-TAGS
-* HTML 5
-* CSS 3
-* SASS
-* JS / Ajax
-* MySQL
-* PHP
+## TECHNOS
+<img src="https://img.shields.io/badge/html5-e34c26?&style=for-the-badge" alt="Html5" title="HTML 5" height="19">
+<img src="https://img.shields.io/badge/css3-2965f1?&style=for-the-badge" alt="css3" title="CSS 3" height="19">
+<img src="https://img.shields.io/badge/sass-cc6699?&style=for-the-badge" alt="Sass logo" title="SASS" height="19">
+<img src="https://img.shields.io/badge/javascript-f0db4f?&style=for-the-badge" alt="javascript" title="javascript" height="19">
+<img src="https://img.shields.io/badge/mysql-4479A1?&style=for-the-badge" alt="mysql" title="mysql" height="19">
+<img src="https://img.shields.io/badge/php-8993be?&style=for-the-badge" alt="php" title="php" height="19">
 
 ## AUTEURE
 * Déb Phoenix ~ *good vibes only*
+  <img
+  src="https://github-readme-stats.vercel.app/api/wakatime?username=debPhoenix"/>
+
 
 ## CONTRIBUTORS:
 **Note:** If you would like to contribute to this repository, feel free to send a pull request, and I will review your code. Also feel free to post about any problems that may arise in the issues section of the repository.
