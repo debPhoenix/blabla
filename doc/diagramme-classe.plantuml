@@ -1,0 +1,21 @@
+@startuml Classe
+
+class users {
+    -user_id: int
+    -unique_id: int
+    -prenom: varchar
+    -nom: varchar
+    -email: varchar
+    -mdp: varchar
+    -avatar: varchar
+    -status: varchar
+}
+
+class messages {
+    -msg_id: int
+    -incoming_msg_id: int
+    -outgoing_msg_id: int
+    -msg: varchar
+}
+
+@enduml
