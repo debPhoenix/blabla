@@ -1,4 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Roboto:wght@400;500&display=swap');
+
+$body-background:#f7f7f7;
+$wrapper-background: #fff;
+$header-form-border-bottom: #e6e6e6;
+
+$form-input-border: #ccc;
+$form-button-input-background:#333;
+$form-button-input-text: #fff;
+$form-error-txt:#ff5466;
+$form-error-background:#ffdfe2;
+$form-error-border:#ff5466;
+$form-link-a:#333;
+$form-i-eye:#ccc;
+$form-i-eye-active:#333;
+
+$user-text:#000;
+$user-logout-text:#fff;
+$user-button-logout-background:#333;
+$users-line-separator:#e6e6e6;
+
+$search-input-border:#CCC;
+$search-glass:#333;
+$search-glass-invisible-background:#fff;
+$search-cross:#fff;
+$search-cross-background:#333;
+
+$users-list-dashed-line:#ccc;
+$users-list-last-message:#67676a;
+$users-status-dot-online:#2bbb7a;
+$users-status-dot-offline:#ccc;
+
+$outgoing-background-message:#333;
+$outgoing-text:#fff;
+$incoming-background-message:#fff;
+$incoming-text:#333;
+
+$back-icon:#333;
+$chat-box-background:#f7f7f7;
+$typing-area-input-border:#ccc;
+$send-icon-background:#333;
+$send-icon-color:#fff;
+
 *{
     margin:0;
     padding: 0;
@@ -12,17 +54,17 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f7f7f7;
+    background-color: $body-background;
 }
 .wrapper{
-    background-color: #fff;
+    background-color: $wrapper-background;
     width: 450px;
     box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
                 0 32px 64px -48px rgba(0,0,0,0.15);
     border-radius: 16px;
 }
 
-///   Signup Form   ///
+///   Signup + Login Form   ///
 .form{
     padding: 25px 30px;
 }
@@ -31,7 +73,7 @@ body{
     font-family: 'Courier Prime', monospace;
     font-size: 25px;
     font-weight: 700;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid $header-form-border-bottom;
     padding-bottom: 10px;
 }
 
@@ -61,7 +103,7 @@ body{
     width: 100%;
     font-size: 16px;
     padding: 0 10px;
-    border: 1px solid #ccc;
+    border: 1px solid $form-input-border;
     border-radius: 5px;
 }
 
@@ -74,21 +116,21 @@ body{
     margin-top: 13px;
     height: 45px;
     border: none;
-    background-color: #333;
-    color: #fff;
+    background-color: $form-button-input-background;
+    color: $form-button-input-text;
     border-radius:5px;
     cursor: pointer;
 }
 
 .form form .error-txt{
-    color: #ff5466;
-    background-color: #ffdfe2;
+    color: $form-error-txt;
+    background-color: $form-error-background;
     font-weight: 500;
     padding: 8px 10px;
     text-align: center;
     border-radius: 5px;
     margin-bottom: 10px;
-    border: 1px solid #ff5466;
+    border: 1px solid $form-error-border;
     display: none;
 }
 
@@ -98,7 +140,7 @@ body{
 }
 
 .form .link a{
-    color: #333;
+    color: $form-link-a;
     text-decoration: underline;
 }
 
@@ -109,13 +151,13 @@ body{
 .form form .field i{
     position: absolute;
     right: 15px;
-    color: #ccc;
+    color: $form-i-eye;
     top: 70%;
     transform: translateY(-50%);
     cursor: pointer;
 }
 .form form .field i.active::before{
-    color: #333;
+    color: $form-i-eye-active;
     content: "\f070";
 }
 
@@ -129,7 +171,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #e6e6e6;
+    border-bottom: 1px solid $users-line-separator;
     padding-bottom: 20px;
 }
 
@@ -149,7 +191,7 @@ body{
 }
 
 :is(.users, .users-list ) .details{
-    color: #000;
+    color: $user-text;
     margin-left: 15px;
 }
 
@@ -159,10 +201,10 @@ body{
 }
 
 .users header .logout{
-    font-size: 16px;
-    color: #fff;
+    font-size: 15px;
+    color: $user-logout-text;
     padding: 7px 15px;
-    background-color: #333;
+    background-color: $user-button-logout-background;
     border-radius: 5px;
 }
 
@@ -181,7 +223,7 @@ body{
     position: absolute;
     height: 40px;
     width: 87%;
-    border: 1px solid #CCC;
+    border: 1px solid $search-input-border;
     padding: 0 13px;
     font-size: 16px;
     border-radius: 5px 0 0 5px;
@@ -197,12 +239,12 @@ body{
 }
 
 .users .search button{
-    width: 47px;
+    width: 51px;
     height: 40px;
     border: none;
     outline: none;
-    color: #333;
-    background-color: #fff;
+    color: $search-glass;
+    background-color: $search-glass-invisible-background;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 16px;
@@ -210,8 +252,8 @@ body{
 }
 
 .users .search button.active{
-    color:#fff;
-    background-color: #333;
+    color: $search-cross;
+    background-color: $search-cross-background;
 }
 
 .users .search button.active i::before{
@@ -230,9 +272,8 @@ body{
     padding-right: 15px;
     margin-bottom: 10px;
     margin-top: 20px;
-    // break-after: 10px;
     border-bottom-style: dashed;
-    border-color: #CCC;
+    border-color: $users-list-dashed-line;
 }
 .users-list a:last-child{
     border: none;
@@ -244,17 +285,17 @@ body{
     width: 40px;
 }
 .users-list a .content p{
-    color: #67676a;
+    color: $users-list-last-message;
 }
 .users-list a .status-dot{
     font-size: 12px;
-    color: #2bbb7a;
+    color: $users-status-dot-online;
 }
 
 // offline status //
 .users-list a .status-dot.offline{
     font-size: 12px;
-    color: #ccc;
+    color: $users-status-dot-offline;
 }
 
 
@@ -273,7 +314,7 @@ body{
 
 .chat-area header .back-icon{
     font-size: 15px;
-    color: #333;
+    color: $back-icon;
 }
 
 .chat-area header span{
@@ -284,7 +325,7 @@ body{
 .chat-box{
     height: 500px;
     overflow-y: auto;
-    background: #f7f7f7;
+    background: $chat-box-background;
     padding: 10px 30px 20px 30px;
     box-shadow: inset 0 32px 32px -32px rgb(0 0 0 / 5%),
                 inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
@@ -311,8 +352,8 @@ body{
 }
 
 .outgoing .details p{
-    background-color: #333;
-    color: #fff;
+    background-color: $outgoing-background-message;
+    color: $outgoing-text;
     border-radius: 18px 18px 0 18px;
 }
 
@@ -333,8 +374,8 @@ body{
 }
 
 .incoming .details p{
-    background-color: #fff;
-    color: #333;
+    background-color: $incoming-background-message;
+    color: $incoming-text;
     border-radius: 18px 18px 18px 0;
 }
 
@@ -348,15 +389,15 @@ body{
     height: 45px;
     width: 85%;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid $typing-area-input-border;
     padding: 0 13px;
     border-radius: 5px 0 0 5px;
     outline: none;
 }
 
 .typing-area button{
-    background-color: #333;
-    color: #fff;
+    background-color: $send-icon-background;
+    color: $send-icon-color;
     font-size: 19px;
     cursor: pointer;
     width: 14%;
