@@ -13,10 +13,12 @@
         }
 
         // cut if word has more than 25 letters
-        (strlen($result) > 25) ? $msg = substr($result, 0, 25). '...'  : $msg = $result;
+        (strlen($result) > 25) ? $msg = mb_substr($result, 0, 25). '...'  : $msg = $result;
 
         // add "Toi: " when user send a message, before text of his/her message
         // ($outgoing_id == $row2['outgoing_msg_id']) ? $you = "Toi: " : $you = "";
+        // var_dump($row2);
+        // -> no message?
 
         // check if user is online or offline
         ($row['status'] === "Hors ligne") ? $offline = "offline" :  $offline = "";
@@ -26,7 +28,7 @@
                             <img src="assets/back/avatar/' . $row['avatar'] . '" alt="">
                             <div class="details">
                                 <span>'. $row['prenom'] . " " . $row['nom'] .'</span>
-                                <p>'. $msg .'</p>
+                                <p>'.$msg.'</p>
                             </div>
                         </div>
                         <div class="status-dot '.$offline.' "><i class="fas fa-circle"></i></div>
